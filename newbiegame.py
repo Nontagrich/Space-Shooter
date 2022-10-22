@@ -184,7 +184,7 @@ def main():
 
         if lost:
             lost_label = lost_font.render("You Lost!!", 1, (255,255,255))
-            WIN.blit(lost_label, (width/2 - lost_label.get_width()/2, 350))
+            WIN.blit(lost_label, (250, 350))
 
         pygame.display.update()
 
@@ -247,7 +247,7 @@ def main_menu():
     while run:
         WIN.blit(bg, (0,0))
         title_label = title_font.render("... Press the Spacebar ...", 1, (255,255,255))
-        WIN.blit(title_label, (width/2 - title_label.get_width()/2, 350))
+        WIN.blit(title_label, (100, 350))
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
