@@ -86,11 +86,7 @@ class Ship:
             self.lasers.append(laser)
             self.cool_down_counter = 1
 
-    def get_width(self):
-        return self.ship_img.get_width()
-
-    def get_height(self):
-        return self.ship_img.get_height()
+    
 
 
 class Player(Ship):
@@ -220,11 +216,11 @@ def main():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_a] and player.x - player_vel > 0: # left
             player.x -= player_vel
-        if keys[pygame.K_d] and player.x + player_vel + player.get_width() < width: # right
+        if keys[pygame.K_d] and player.x + player_vel + 100 < width: # right
             player.x += player_vel
         if keys[pygame.K_w] and player.y - player_vel > 0: # up
             player.y -= player_vel
-        if keys[pygame.K_s] and player.y + player_vel + player.get_height() + 15 < height: # down
+        if keys[pygame.K_s] and player.y + player_vel + 150 < height: # down
             player.y += player_vel
         if keys[pygame.K_SPACE]:
             player.shoot()
@@ -239,7 +235,7 @@ def main():
             if collide(enemy, player):
                 player.health -= 10
                 enemies.remove(enemy)
-            elif enemy.y + enemy.get_height() > height:
+            elif enemy.y > height:
                 lives -= 1
                 enemies.remove(enemy)
 
