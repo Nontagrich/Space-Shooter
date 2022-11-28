@@ -17,7 +17,6 @@ blue_ship = pygame.image.load(os.path.join("Ship", "pixel_ship_blue_small.png"))
 green_ship = pygame.image.load(os.path.join("Ship", "pixel_ship_green_small.png"))
 
 ###
-
 yellow_laser = pygame.image.load(os.path.join("Ship","pixel_laser_yellow.png"))
 
 red_laser = pygame.image.load(os.path.join("Ship","pixel_laser_red.png"))
